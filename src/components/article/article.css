@@ -1,0 +1,181 @@
+.mainTitle h1,p{
+    font-family: BYekan;
+}
+.mainTitle img{
+    width: 50%;
+    margin: auto;
+}
+.imageSection{
+    text-align: center;
+}
+.mainTitle{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(17, 37, 10, 0.911) ;
+    text-align: justify;
+}
+.postCard{
+    font-family: BYekan;
+    text-align: justify;
+}
+.postCard img{
+    width: 90%;
+    height: 200px;
+    margin: auto;
+}
+
+.readMoreText{
+    display: inline;
+  width: 100%;
+}
+.read-or-hide{
+    color: rgb(192,192,192);
+    cursor: pointer;
+}
+.paperInf p{
+    margin-bottom: 0;
+}
+.postCardImG{
+    text-align: center;
+}
+.paper-body h4{
+    padding-right: 2rem;
+}
+.paper-body p{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: justify;
+}
+.paper-body img{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    height: 15rem;
+    width: 20rem;
+}
+.paper-body h5{
+    font-family: BYekan;
+    font-size: small;
+    text-align: center;
+}
+.paper-body input{
+    border: none;
+}
+.paper-body textarea{
+    text-align: left;
+    text-justify: left;
+    direction: ltr;
+}
+
+.key-words h5{
+    padding-right: 2rem;
+    font-family: BYekan;
+}
+.key-words a{
+    margin-right: 0.5rem;
+}
+.key-words li{
+    list-style: none;
+    float: right;
+    margin-top: 2%;
+    width: inherit;
+}
+.key-words ul{
+    margin-right: 4%;
+    width: 90%;
+}
+.key-words a{
+    font-family: BYekan;
+}
+.paper-body-img{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+}
+.key-word-s{
+    margin-right: 4%;
+    
+
+}
+.key-word-s-k{
+    margin-right: 1%;  
+}
+
+.mainTitle textarea{
+    background-color: rgba(17, 37, 10, 0.911);
+    color: #fff;
+    border: none;
+    outline:none
+}
+
+.mainTitle textarea:focus{
+    outline:none
+}
+.input-image{
+    text-align: center;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .writer-input{
+    background-color: rgba(17, 37, 10, 0.911);
+    border: none;
+    color: #fff;
+  }
+  .article-update-des p{
+      margin-bottom: 0;
+  }
+  .image-bar{
+    margin-top: 10px;
+    list-style: none
+  }
+  .image-bar li{
+    margin-top: 10px;
+  }
+  .image-bar img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+   
+  }
+  .image-bar label{
+    margin: auto;
+    padding-left: 25px;
+  }
+  .picture-form{
+    justify-content: center;
+  }
+  .link{
+      text-align: center;
+  }
+  h5{
+      font-family: bYekan;
+      padding: 1rem;
+  }
+  ul{
+    padding-right: 0px;
+  }
+  .refrences{
+      font-family: 'BYekan';
+  }
+
+  
+
+
+  

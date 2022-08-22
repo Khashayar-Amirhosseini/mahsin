@@ -1,0 +1,179 @@
+
+  .expanded-navbar{
+    display: none;
+    flex-direction: row;
+    justify-content: center
+
+  }
+  .nav-list-items {
+    display: flex;
+    list-style-type: none;
+  }
+  .navbar-small-screen img{
+    width: 50px;
+    border-radius: 25px;
+  }
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-light{
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+ .nav-link:hover{
+    color:rgba(252, 164, 2, 0.884) !important;
+    cursor: pointer;
+  }
+  button.nav-link{
+    background-color: transparent;
+    border: none;
+  }
+  button.nav-link2{
+    background-color: transparent;
+    border: none;
+  }
+  button.small-screen-nav-item {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .navbar-light  {
+    font-family: 'BYekan';
+    font-size: 100%;
+  }
+  .nav-link,.small-screen-nav-item {
+    font-family: 'BYekan';
+    color:rgba(17, 37, 10, 0.911) !important ;
+  }
+  .small-screen-nav-item {
+    font-family: 'BYekan';
+    color:rgba(244, 245, 244, 0.911) !important ;
+    text-decoration: none;
+    
+  }
+  .small-screen-nav-item:hover {
+    color:rgba(252, 164, 2, 0.884) !important;
+  }
+  
+  .nav-link.active , .small-screen-nav-item.nav-link.active{
+    color:  rgba(252, 164, 2, 0.884) !important;
+  }
+  .container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-small-screen{
+
+    position:fixed;
+    top:0;
+    right: 0;
+    z-index: 3;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00543b+0,004e35+47,004630+100&0.86+0,0.88+100 */
+    background: -moz-linear-gradient(top,  rgba(17, 37, 10, 0.911) 0%, rgba(17, 37, 10, 0.911) 47%, rgba(17, 37, 10, 0.911) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(17, 37, 10, 0.911) 0%,rgba(17, 37, 10, 0.911) 47%,rgba(17, 37, 10, 0.911) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(17, 37, 10, 0.911) 0%,rgba(17, 37, 10, 0.911) 47%,rgba(17, 37, 10, 0.911) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db00543b', endColorstr='#e0004630',GradientType=0 ); /* IE6-9 */
+    width: 81%;
+    height: 100%;
+    transition: 5s ease;
+    flex-direction: row;
+  }
+  ul.slider-nav{
+    list-style-type: none;
+    margin:  10px;
+    padding: 0;
+    width: 100%;
+  }
+  .slider-menu{
+    font-family: 'BYekan';
+    font-size: x-large;
+    color:  rgba(252, 164, 2, 0.884) !important;
+    text-align: center;
+    
+  }
+  .slider-menu img{
+    width: 80%;
+  }
+  
+  @media screen and (min-width:559px){
+    .togbut{
+      display: none;
+    }
+  }
+  @media screen and (min-width:559px){
+    .expanded-navbar{
+      display: flex;
+    }
+  }
+  .togbut{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-width: 0
+    
+  }
+  
+  .alwaysTop{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+   width: 100%;
+   background-color: rgba(17, 37, 10, 0.911);
+   padding-bottom: 0;
+   width: 100% !important;
+   z-index: 100;
+   background: url(../../assets/img/header.jpg);
+  }
+  ul.nav-list-items{
+    padding: 10px;
+    margin: 0;
+  }
+  .nav-link2{
+    font-family: 'BYekan';
+    color: rgba(252, 164, 2, 0.884)!important ;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+  .nav-link2:hover{
+    font-family: 'BYekan';
+    color:rgba(244, 245, 244, 0.911) !important;
+    text-decoration: none;
+    
+  }
+  .togbut-onTop{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  padding-bottom: 0;
+  z-index: 2;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  right: 4px;
+  
+  }
+  .btn-close-color{
+    color: rgba(252, 164, 2, 0.884);
+  }
+  .navUserProfile{
+    position: absolute;
+right: 25px;
+bottom: 15px;
+  }
+  .slider-nav a{
+    text-decoration: none;
+  }
+  .discountButton{
+    background-color: white;
+    border: none;
+    font-family: "BYekan";
+    text-align: center;
+  }
+  
+
+  
+
+
+  
+  

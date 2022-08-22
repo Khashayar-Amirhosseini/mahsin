@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: 'B-Sina';
+    src: local('B-Sina'), url(   ../public/fonts/B-Sina/B\ Sina\ Bold_0.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'A-Iranian-Sans';
+    src: local('A-Iranian-Sans'), url(../public/fonts/A-Iranian-Sans/Iranian\ Sans.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'BYekan';
+    src: local('BYekan'), url(./fonts/BYekan.eot) format('eot');
+    src: local('BYekan'), url(./fonts/BYekan.ttf) format('truetype');
+    src: local('BYekan'), url(./fonts/BYekan.woff) format('woff');
+  }
+
+.container{
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.row {
+  --bs-gutter-x: 0;}
+
+.like button:focus{
+  box-shadow: none;
+}
+h1,h3{
+  font-family: "BYekan";
+}

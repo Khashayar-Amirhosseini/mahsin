@@ -1,0 +1,10 @@
+.signUpInf button{
+    margin: auto;
+    margin-top: 10px;
+}
+.submitButton{
+    text-align: center;
+}
+.signUpErrors{
+    margin-top: 10px;
+}

@@ -1,0 +1,42 @@
+.facility-dis{
+    font-family: BYekan;
+    text-align: justify;
+    width: 95%;
+margin: auto;
+}
+.facility-img{
+    text-align: center !important; 
+    
+}
+.facility-img img{
+    width: 50% !important;
+}
+
+.facility-dis h5{
+    font-family: BYekan;
+    text-align: justify;
+    padding-top: 15px;
+}
+.form-fasility{
+    font-family: BYekan;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #1c2d15f2;
+    margin: 5px;
+}
+
+.fasility-image img{
+    height: 100%;
+    width: 100%;
+}
+.fasilities{
+    justify-content: center;
+}
+.fasility-update-des p{
+    margin: 5px;
+    text-align: center;
+}
+.fasility-description{
+    margin: 5px;
+}

@@ -1,0 +1,48 @@
+.papers .row{
+    padding-top: 10px;
+    justify-content: center;
+    font-family: BYekan;
+   
+    
+}
+
+.card h5{
+   font-family: BYekan;
+}
+.card h5:hover{
+    font-family: BYekan;
+    color:rgba(252, 164, 2, 0.884) ;
+}
+.card p{
+    white-space: normal;
+    font-family: BYekan;  
+}
+.readmore{
+    padding-top: 20px;
+    font-family: BYekan;
+    text-align: center;
+}
+.modal{
+    font-family: BYekan;
+}
+.paperArchivse{
+    max-width: 90%;
+    margin: 1.75rem auto;
+}
+.likes{
+    flex: 1 0 auto;
+}
+
+.card{
+    text-align: justify;
+    height: 95%;
+    width: 90%;
+    margin: auto;
+    margin: 5%;
+}
+.card a{
+    color: black;
+text-decoration-line: none;
+}
+
+

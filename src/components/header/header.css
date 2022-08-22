@@ -1,0 +1,88 @@
+
+.main-header{
+    background: url(../../assets/img/header.jpg) repeat center center;
+}
+.top-menu{
+    padding-top: 40px;;
+}
+
+.phone-number{
+    text-align: left;
+}
+
+.socials a{
+    margin-left: 10px;
+    color: #F3B40D;
+}
+.socials a:hover{
+    width: fit-content !important;
+    margin-left: 10px;
+    color: #f7d67d;
+    
+}
+.phone-number p,i{
+    color: #F3B40D;
+    font-family: BYekan;
+    width: fit-content;
+    float: right;
+}
+.phone-number a{
+    font-family: BYekan;
+    color: #fff !important;
+    margin-left: 10px;
+    float: right;
+}
+.phone-number i{
+    padding-top: 6px;
+}
+.logo{
+    text-align: center;
+}
+.logo img{
+    width: 227px;
+    height: 222px;
+}
+.small-screen{
+    display: none;
+}
+@media screen and (max-width:575px){
+    .top-menu{
+        display:none ;
+    } 
+    .small-screen{
+        display:flex ;
+    } 
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    text-align: center ;
+}
+
+.s2{
+    display: flex;
+    justify-content: center;
+}
+iframe {
+    border: 0;
+    padding-top: 10px;
+  }
+.socialSkeleton{
+    margin-left: 10px;
+}
+.userProfile{
+padding-right: 5%;
+padding-left: 5%;
+padding-top: 1%;
+margin: 0;
+color: wheat;
+justify-content: stretch;
+}
+.userProfile p{
+margin-bottom: 0;
+margin-right: 1rem;
+}
+
+
+
+

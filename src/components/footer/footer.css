@@ -1,0 +1,42 @@
+.footer{
+    background: url(../../assets/img/header.jpg) repeat center center;
+    margin-top: 10px;
+}
+
+
+.copyright{
+    text-align: center;
+    font-family: BYekan;
+    color: #F3B40D;;
+}
+.contact{
+    font-family: BYekan;
+}
+.contact h5,h3{
+    margin-top: 10px;
+    color: hsl(44, 91%, 50%);
+    margin-right: 10px;
+}
+.contact h6{
+    color: #FFF;
+    margin-right: 20px;
+}
+
+.map{
+    text-align: center;
+    margin: auto;
+    font-family: BYekan;
+}
+.contact input{
+    background: content-box;
+color: white;
+border: none;}
+.contact h6{
+    margin: 0;
+}
+.socials input{
+    margin-left: 20px;
+}
+.Errors{
+    margin-right: 20px;
+}

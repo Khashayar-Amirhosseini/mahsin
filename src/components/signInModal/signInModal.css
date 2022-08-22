@@ -1,0 +1,16 @@
+.signInModal{
+    width: 90%;
+  }
+  
+  @media screen and (min-width:559px){
+    .signInModal{
+      width: 50%;
+    }
+  }
+  .Enter{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .register{
+    text-align: center;
+  }
