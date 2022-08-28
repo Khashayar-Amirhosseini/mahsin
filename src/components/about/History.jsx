@@ -12,6 +12,7 @@ const History = (props) => {
     const[errors,setErrors]=useState([])
     const [isSending,setIsSending]=useState(false)
     const user=props.user
+  
    
 
     function handleChange(e){
@@ -66,8 +67,7 @@ const History = (props) => {
         
     }
 
-    return ( 
-        
+    return (
         user.userInf.history?
             <div className="accordion-body">
                 <form>

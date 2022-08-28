@@ -12,23 +12,26 @@ import photo4 from '../assets/img/c4.jpg'
 import photo5 from '../assets/img/c5.jpg'
 import { useEffect } from "react";
 import axios from "axios";
+import pictureProfile from '../assets/img/image.png'
 export const AboutContext=createContext()
 const AboutContextProvider = (props) => {
     const Address=props.address
     const [doctor,setDoctor]=useState([]);
-    const[goals,setGoals]=useState([]) 
-    const[policies,setPolicies]=useState([]);
-    const[acheivment,setAcheivment]=useState([]);
-    const[photo,setPhoto]=useState([])
+    const[goals,setGoals]=useState([{id:0,description:"",state:"inactive",user:{name:"",family:""},date:new Date()}]) 
+    const[policies,setPolicies]=useState([{id:0,description:"",state:"inactive",user:{name:"",family:""},date:new Date()}]);
+    const[acheivment,setAcheivment]=useState([{id:0,description:"",state:"inactive",user:{name:"",family:""},date:new Date()}]);
+    const[photo,setPhoto]=useState([{id:0,link:pictureProfile,user:{name:"",family:""},date:new Date}])
     const[isLoading,setIsLoading]=useState(true);
-    const [history,setHistory]=useState({});
+    const [history,setHistory]=useState({description:""});
     useEffect(async()=>{
         const response1=await axios({
             method: 'get',
             url: `${Address}/action/guest/findAllHistory.do?`,
             withCredentials: false,
           })
+          if(response1.status=200){
           setHistory(response1.data[0])  
+          }
     },[])
     useEffect(
         async()=>{
@@ -53,7 +56,7 @@ const AboutContextProvider = (props) => {
             withCredentials:false
         })
         
-        if(response.status=200){
+        if(response.status=200&&response.data.lenght>0){
         if(Array.isArray(response.data)) {
             setGoals(response.data)
             }
@@ -68,7 +71,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllPolicies.do?`,
             withCredentials:false
         })
-        if(response.status=200){
+        if(response.status=200&&response.data.lenght>0){
         if(Array.isArray(response.data)) {
             setPolicies(response.data)
             }
@@ -83,7 +86,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllAchievement.do?`,
             withCredentials:false
         })
-        if(response.status=200){
+        if(response.status=200&&response.data.lenght>0){
         if(Array.isArray(response.data)) {
             setAcheivment(response.data)
             }
@@ -98,7 +101,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllPictures.do?`,
             withCredentials:false
         })
-        if(response.status=200){
+        if(response.status=200&&response.data.lenght>0){
         if(Array.isArray(response.data)) {
             setPhoto(response.data)
             }
@@ -108,6 +111,7 @@ const AboutContextProvider = (props) => {
         
         }
     },[]) 
+    
    
     
 

@@ -5,13 +5,14 @@ import Motus from '../assets/img/Motus-ax.png'
 import monalisatouch from '../assets/img/monalisatouch.png'
 import Liposonix from '../assets/img/Liposonix.png'
 import axios from "axios";
+import facilityImage from "../assets/img/image.png"
  
 
 export const FasilitiesContext=createContext()
 const FasilitiesProvider = (props) => {
    const Address=props.address
     const [fasility,setFasility]=useState([
-        {id:1,name:'',utility:'',description:'',image:Thermage,user:{name:"",family:""} },
+        { id: 0, name: "", utility: "", image: facilityImage, description: "", user: {name:"",family:""}, date: new Date }
     ])
     const [isLoading,setIsLoading]=useState(true);
     
@@ -19,25 +20,22 @@ const FasilitiesProvider = (props) => {
         async()=>{
         const response=await axios({
             method:'get',
-            url:`${Address}action/guest/findAllFacilities.do?`,
+            url:`${Address}/action/guest/findAllFacilities.do?`,
             withCredentials:false
         })
         if(response.status=200){
-            
+            if(response.data.lenght>0){
             if(Array.isArray(response.data)) {
                 setFasility(response.data) 
-                }
+            }
             else{
                 setFasility([response.data])
-            }
+            }}
             setIsLoading(false)
             return response;
         }
-        
-        
     },[]);
-    
-
+   
     return ( 
         <FasilitiesContext.Provider value={{fasility,isLoading}}>
                 {props.children}

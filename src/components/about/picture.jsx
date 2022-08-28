@@ -84,6 +84,7 @@ const Picture = (props) => {
                setIsSending(false) 
         }
     }
+
     return (
         user.userInf.picture ?
         <li className="col-md-2 col-sm-3" > 

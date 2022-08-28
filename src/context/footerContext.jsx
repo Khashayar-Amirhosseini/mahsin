@@ -21,7 +21,7 @@ const FooterContextProvider = (props) => {
         async()=>{
         const response=await axios({
             method:'get',
-            url:`${Address}action/guest/findAllFooters.do?`,
+            url:`${Address}/action/guest/findAllFooters.do?`,
             withCredentials:false
         })
         if(response.status==200){

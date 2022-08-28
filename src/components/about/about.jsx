@@ -39,9 +39,7 @@ const About = (props) => {
             setDoctorList(doctor)
     },[doctor.length])
     useEffect(()=>{
-        
             setGoalList(goals)
-        
      },[goals.length])
      useEffect(()=>{
             setPolicyList(policies)

@@ -4,16 +4,13 @@ import hairService from '../assets/img/skin-hair-service.jpg'
 import surgeryServices from '../assets/img/serive_labiaplasty.jpg'
 import { useEffect } from "react";
 import axios from "axios";
+import serviceImage from "../assets/img/image.png"
 
 
 export const ServiceContext=createContext()
 const ServiceContextProvider = (props) => {
-    /*const [cluster, setCluster]=useState([
-        {id:1,title:'پوست و مو',image:hairService,services:[{id:1,title:'بوتاکس'},{id:2,title:'تزریق ژل'},{id:3,title:'هایفو'}]},
-        {id:2,title:'لیزر موهای زائد',image:lazerServices,services:[{id:1,title:'لیزر آقایان'},{id:2,title:'لیزر بانوان'}]},
-        {id:3,title:'جراحی های زیبایی',image:surgeryServices,services:[{id:1,title:'جراحی بینی'},{id:2,title:'بوتاکس'}]}
-     ])*/
-     const [cluster, setCluster]=useState([]);
+    
+     const [cluster, setCluster]=useState([{id:0,title:"",description:"",image:serviceImage,services:[{id:0,title:"",description:"",user:{name:"",family:""},date:new Date}],user:{name:"",family:""},date:new Date}]);
      const[isLoading,setIsLoading]=useState(true);
      const Address=props.address
      useEffect(

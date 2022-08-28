@@ -31,6 +31,7 @@ const Header = (props) => {
                 url:`${Address}/action/guest/findAllFooters.do?`,
                 withCredentials:false
             })
+            
             if(response.status==200) {
                 setIsLoading(false)
                 setCHeaderContact(response.data)

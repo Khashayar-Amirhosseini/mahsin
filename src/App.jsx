@@ -20,7 +20,7 @@ import { useEffect } from "react";
 
 
 const App = () => {
-    const Address = "http://192.168.1.106:8082/"
+    const Address = "http://89.32.250.218:8080/MahsinApi"
     // const user={ name: "خشایار", family: "امیرحسینی", id: 25, role: [
     // {id:1,roleName:"admin",recordControl:1},
     // {id:2,roleName:"history",recordControl:1},
