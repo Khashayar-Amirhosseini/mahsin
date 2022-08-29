@@ -1,0 +1,19 @@
+{
+    "name": "\u0645\u0627\u0647 \u0633\u06cc\u0646",
+    "short_name": "\u0645\u0627\u0647 \u0633\u06cc\u0646",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0c1b06",
+    "background_color": "#0c1b06",
+    "display": "standalone"
+}

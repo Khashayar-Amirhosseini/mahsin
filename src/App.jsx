@@ -15,6 +15,7 @@ import About from "./components/about/about";
 import UserProfile from "./containers/userProfile/userProfile";
 import { useState } from "react";
 import { useEffect } from "react";
+import logo from './logo.png';
 
 
 

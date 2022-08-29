@@ -57,7 +57,6 @@ const AboutContextProvider = (props) => {
         })
         
         if(response.status=200&&response.data.length>0){
-            console.log(":)))")
         if(Array.isArray(response.data)) {
             setGoals(response.data)
             }
