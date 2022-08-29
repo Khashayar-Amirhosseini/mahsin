@@ -24,7 +24,7 @@ const FasilitiesProvider = (props) => {
             withCredentials:false
         })
         if(response.status=200){
-            if(response.data.lenght>0){
+            if(response.data.length>0){
             if(Array.isArray(response.data)) {
                 setFasility(response.data) 
             }

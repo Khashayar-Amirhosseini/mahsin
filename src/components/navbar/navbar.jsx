@@ -81,16 +81,16 @@ const NavBar = (props) => {
                         <NavLink className="nav-link " aria-current="page" to="/" >خانه</NavLink>
                     </li>
                     <li className="nav-item">
-                    <HashLink className="nav-link" to="/#about">درباره ما</HashLink>  
+                    <HashLink className="nav-link" to="/mahsin/#about">درباره ما</HashLink>  
                     </li>
                     <li className="nav-item">
-                    <HashLink className="nav-link" to="/#services">خدمات</HashLink>  
+                    <HashLink className="nav-link" to="/mahsin/#services">خدمات</HashLink>  
                     </li>
                     <li className="nav-item">
-                    <HashLink className="nav-link" to="/#contents">مقالات</HashLink>  
+                    <HashLink className="nav-link" to="/mahsin/#contents">مقالات</HashLink>  
                     </li>
                     <li className="nav-item">
-                    <HashLink className="nav-link" to="/#fasilites">تجهیزات</HashLink>  
+                    <HashLink className="nav-link" to="/mahsin/#fasilites">تجهیزات</HashLink>  
                     </li>
                     {(!isAuth)&&(<li className="nav-item">
                         <a className="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#signIn" to="#signIn" style={{ cursor: "pointer" }} >عضویت/ورود</a>
@@ -134,19 +134,19 @@ const NavBar = (props) => {
                                 <NavLink className="small-screen-nav-item" aria-current="page" to="/" >خانه</NavLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="small-screen-nav-item" to="/#about">درباره ما</HashLink>
+                                <HashLink className="small-screen-nav-item" to="/mahsin/#about">درباره ما</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="small-screen-nav-item" to="/#contactUs">تماس با ما</HashLink>
+                                <HashLink className="small-screen-nav-item" to="/mahsin/#contactUs">تماس با ما</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="small-screen-nav-item" to="/#services">خدمات</HashLink>
+                                <HashLink className="small-screen-nav-item" to="/mahsin/#services">خدمات</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="small-screen-nav-item" to="/#contents">مقالات</HashLink>
+                                <HashLink className="small-screen-nav-item" to="/mahsin/#contents">مقالات</HashLink>
                             </li>
                             <li className="nav-item">
-                                <HashLink className="small-screen-nav-item" to="/#fasilites">تجهیزات</HashLink>
+                                <HashLink className="small-screen-nav-item" to="/mahsin/#fasilites">تجهیزات</HashLink>
                             </li>
                             {!isAuth&&(<li className="nav-item">
                                 <a style={{ cursor: "pointer" }} className="small-screen-nav-item" aria-current="page" data-bs-toggle="modal" data-bs-target="#signIn" to="#signIn" >عضویت/ ورود</a>
@@ -173,23 +173,23 @@ const NavBar = (props) => {
                     <ul className="nav-list-items" style={{justifyContent:"center"}}>
                         
                         <li className="nav-item ml-2 ">
-                            <NavLink className="nav-link2 " aria-current="page" to="/" >خانه</NavLink>
+                            <NavLink className="nav-link2 " aria-current="page" to="/mahsin/" >خانه</NavLink>
                         </li>
                         <li className="nav-item">
-                            <HashLink className="nav-link2" to="/#about">درباره ما</HashLink>
+                            <HashLink className="nav-link2" to="/mahsin/#about">درباره ما</HashLink>
                         </li>
                         <li className="nav-item">
-                            <HashLink className="nav-link2" to="/#contactUs">تماس با ما</HashLink>
+                            <HashLink className="nav-link2" to="/mahsin/#contactUs">تماس با ما</HashLink>
                         </li>
                         <li className="nav-item">
-                            <HashLink className="nav-link2" to="/#services">خدمات</HashLink>
+                            <HashLink className="nav-link2" to="/mahsin/#services">خدمات</HashLink>
                         </li>
                         
                         <li className="nav-item">
-                            <HashLink className="nav-link2" to="/#contents">مقالات</HashLink>
+                            <HashLink className="nav-link2" to="/mahsin/#contents">مقالات</HashLink>
                         </li>
                         <li className="nav-item">
-                            <HashLink className="nav-link2" to="/#fasilites">تجهیزات</HashLink>
+                            <HashLink className="nav-link2" to="/mahsin/#fasilites">تجهیزات</HashLink>
                         </li>
                         {!isAuth&&(<li className="nav-item">
                             <a className="nav-link2" aria-current="page" data-bs-toggle="modal" data-bs-target="#signIn" to="#signIn" style={{ cursor: "pointer" }}>عضویت/ورود</a>

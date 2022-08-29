@@ -53,6 +53,7 @@ const validate=async()=>{
    e.preventDefault();
    const result=await validate();
    if(result){
+      console.log(result)
       setIsSending(true)  
        try{
          const response = await axios({
@@ -61,7 +62,8 @@ const validate=async()=>{
             &instagram=${result.instagram}&telegram=${result.telegram}&email=${result.email}
             &address=${result.address}&mapSRC=${result.mapSRC}
             &consultantNumber=${result.consultantNumber}
-            &userId=${user.userInf.id}`,
+            &userId=${user.userInf.id}
+            &state=active`,
             headers: {'Access-Token':`${user.token}` },
         })
            setIsSaved(true)

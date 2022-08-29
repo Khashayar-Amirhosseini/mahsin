@@ -56,7 +56,8 @@ const AboutContextProvider = (props) => {
             withCredentials:false
         })
         
-        if(response.status=200&&response.data.lenght>0){
+        if(response.status=200&&response.data.length>0){
+            console.log(":)))")
         if(Array.isArray(response.data)) {
             setGoals(response.data)
             }
@@ -64,6 +65,7 @@ const AboutContextProvider = (props) => {
                 setGoals([response.data])
             }}
     },[]) 
+    
     useEffect(
         async()=>{
         const response=await axios({
@@ -71,7 +73,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllPolicies.do?`,
             withCredentials:false
         })
-        if(response.status=200&&response.data.lenght>0){
+        if(response.status=200&&response.data.length>0){
         if(Array.isArray(response.data)) {
             setPolicies(response.data)
             }
@@ -86,7 +88,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllAchievement.do?`,
             withCredentials:false
         })
-        if(response.status=200&&response.data.lenght>0){
+        if(response.status=200&&response.data.length>0){
         if(Array.isArray(response.data)) {
             setAcheivment(response.data)
             }
@@ -101,7 +103,7 @@ const AboutContextProvider = (props) => {
             url:`${Address}/action/guest/findAllPictures.do?`,
             withCredentials:false
         })
-        if(response.status=200&&response.data.lenght>0){
+        if(response.status=200&&response.data.length>0){
         if(Array.isArray(response.data)) {
             setPhoto(response.data)
             }
