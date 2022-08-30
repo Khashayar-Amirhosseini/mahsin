@@ -21,15 +21,13 @@ const Services = (props) => {
     const[clusterList,setClusterList]=useState([])
     const user = props.user
     const[isDisable,setIsDisable]=useState(false)
+    
     useEffect(()=>{
-        if (clusterList.length===0){
             setClusterList(cluster)
-        }
      },[cluster.length])
+     
     useEffect(()=>{
-         
-             setPaperList(papers)
-         
+             setPaperList(papers) 
       },[papers.length])
     const createCluster=(e)=>{
         e.preventDefault()

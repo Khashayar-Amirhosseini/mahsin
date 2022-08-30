@@ -53,7 +53,7 @@ const validate=async()=>{
    e.preventDefault();
    const result=await validate();
    if(result){
-      console.log(result)
+   
       setIsSending(true)  
        try{
          const response = await axios({
