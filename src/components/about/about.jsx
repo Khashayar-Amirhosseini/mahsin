@@ -37,19 +37,19 @@ const About = (props) => {
     
     useEffect(()=>{
             setDoctorList(doctor)
-    },[doctor.length])
+    },[doctor])
     useEffect(()=>{
             setGoalList(goals)
-     },[goals.length])
+     },[goals])
      useEffect(()=>{
             setPolicyList(policies)
-     },[policies.length])
+     },[policies])
      useEffect(()=>{
             setAchivementList(acheivment)
-     },[acheivment.length])
+     },[acheivment])
      useEffect(()=>{
             setPhotoList(photo)
-     },[photo.length])
+     },[photo])
      
 
     
