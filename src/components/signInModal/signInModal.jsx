@@ -133,7 +133,7 @@ const submitHandler2 = async (e) => {
                         
                           user_email:account.email
                       }
-            emailjs.send('service_5q2j7mb', 'template_hafp27y',template_params, 'd_qZS5h-vWXQ7xB8x')
+            emailjs.send('service_5q2j7mb', 'template_vjvuvis',template_params, 'd_qZS5h-vWXQ7xB8x')
                 .then((result) => {
                    console.log(result.text);
                    setIsSending(false)
