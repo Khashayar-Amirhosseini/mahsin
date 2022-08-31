@@ -65,6 +65,13 @@ const SignUpModal = (props) => {
     const passwordValidation = () => {
         signUpInf.password1 === signUpInf.password2 ? setIsValid(true) : setErrors(["رمز عبورهای وارد شده همخوانی ندارند."]); setIsSending(false)
     }
+    const inviterCodehandler=()=>{
+       if(signUpInf.moaref===""){
+           const newSignUpInf={...signUpInf};
+           newSignUpInf.moaref=0;
+           setSignUpInf(newSignUpInf);
+       }  
+    }
 
 
     const submitHandler = async (e) => {
@@ -73,6 +80,7 @@ const SignUpModal = (props) => {
         e.preventDefault();
         const result = await validate();
         passwordValidation();
+        inviterCodehandler();
         const formData = new FormData;
         if (result && isValid) {
             formData.append("name", result.name);
@@ -95,10 +103,16 @@ const SignUpModal = (props) => {
                     sendEmail(response.data.token);
                 }
                 else {
-                    setErrors([response.data.message])
+                   console.log(response.data.rootCause.sqlstate)
+                    if(response.data.rootCause.sqlstate==="23505"){
+                        const message="ایمیل وارد شده تکراری است."
+                        setErrors([message])  
+                    }
+                    else{
+                        setErrors([response.data.message])
+                    }
                 }
                 setIsSending(false)
-
             }
             catch (e) {
                 setErrors(["مشکل در سرور پیش اومده"])
