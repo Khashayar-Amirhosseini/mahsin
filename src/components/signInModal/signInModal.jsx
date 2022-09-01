@@ -129,13 +129,12 @@ const submitHandler2 = async (e) => {
     const sendEmail = (sk) => {
         setIsSending(true)
         var template_params={
-                          message:Address+`changePassword.jsp?securityKey=${sk}`,
+                          message:Address+`/changePassword.jsp?securityKey=${sk}`,
                         
                           user_email:account.email
                       }
             emailjs.send('service_5q2j7mb', 'template_vjvuvis',template_params, 'd_qZS5h-vWXQ7xB8x')
                 .then((result) => {
-                   console.log(result.text);
                    setIsSending(false)
                 }, (error) => {
                     console.log(error.text);
