@@ -64,9 +64,11 @@ const SignInModal = (props) => {
                 if(response.data.token){
                     setIsLoginSuccessFul(true);
                     props.login(response.data);
-                    localStorage.setItem("user",JSON.stringify(response.data)) ;
-                    
-                }  
+                    localStorage.setItem("user",JSON.stringify(response.data)) ; 
+                }
+                else{
+                    setErrors(["رمز عبور یا ایمیل وارد شده صحیح نیست."])
+                }
             }
             catch (e) {
                 setErrors(["مشکل در سرور پیش اومده"])
