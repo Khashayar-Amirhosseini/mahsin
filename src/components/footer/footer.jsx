@@ -158,7 +158,7 @@ const validate=async()=>{
                      <h6><input type="tel" name="consultantNumber" value={contactInf.consultantNumber} onChange={handleChange} readOnly={!user.userInf.footer} placeholder='شماره مشاوره رایگان'/> </h6>:
                      <></>}
                      <h5>آدرس:</h5>
-                     <h6><input type="text" name="address" value={contactInf.address} style={{width:"100%",marginBottom:10}} readOnly={!user.userInf.footer} onChange={handleChange}/></h6>
+                     <h6><textarea name="address" value={contactInf.address} style={{width:"100%",marginBottom:10}} readOnly={!user.userInf.footer} onChange={handleChange}/></h6>
                   </div>
                </div>
                <div className="row" style={{justifyContent:"center"}}>

@@ -28,7 +28,7 @@
     font-family: BYekan;
 }
 .contact input{
-    background: content-box;
+background: content-box;
 color: white;
 border: none;}
 .contact h6{
@@ -39,4 +39,13 @@ border: none;}
 }
 .Errors{
     margin-right: 20px;
+}
+.contact textarea{
+background: content-box;
+color: white;
+border: none;}
+.contact textarea:focus-visible{
+    border: none;
+    outline: none;
+    background: content-box;
 }
