@@ -48,7 +48,7 @@ const Header = (props) => {
             {isAuth?
             <div className='row  userProfile'>
                 <div className='col-6'>
-                <div style={{float:"right",width:"auto"}}><NavLink to="/userProfile"><i className="fa fa-user-circle-o" aria-hidden="true"></i></NavLink></div>
+                <div style={{float:"right",width:"auto"}}><NavLink to="mahsin/userProfile"><i className="fa fa-user-circle-o" aria-hidden="true"></i></NavLink></div>
                 <p style={{float:"right",width:"auto"}}>سلام {user.userInf.name} عزیز </p>
                 </div>
                 <div className='col-6'style={{textAlign:'left'}} >

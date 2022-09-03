@@ -117,7 +117,7 @@ const NavBar = (props) => {
                     {isAuth&&(
                         <div className="row">
                             <div className="col-10" style={{ fontFamily: "bYekan" }}>
-                                <div><h3><NavLink to="/userProfile"><i className="fa fa-user-circle-o " style={{ marginLeft: 5 }} aria-hidden="true"></i></NavLink></h3><h3>{user.userInf.name} {user.userInf.family}</h3></div>
+                                <div><h3><NavLink to="mahsin/userProfile"><i className="fa fa-user-circle-o " style={{ marginLeft: 5 }} aria-hidden="true"></i></NavLink></h3><h3>{user.userInf.name} {user.userInf.family}</h3></div>
                             </div>
                             <div className='col-2' style={{ textAlign: 'left' }} >
                                 <button style={{ backgroundColor: "rgba(0, 0, 0, 0)", border: 'none', height: "100%" }} onClick={logoutHandler}><i className="fa fa-power-off" aria-hidden="true"></i></button>
@@ -168,7 +168,7 @@ const NavBar = (props) => {
             {showNav && (
                 <nav className='expanded-navbar alwaysTop' >
                     
-                    {isAuth ? <NavLink  to="/userProfile"><i className="fa fa-user-circle-o navUserProfile" aria-hidden="true"></i></NavLink> : <></>}
+                    {isAuth ? <NavLink  to="mahsin/userProfile"><i className="fa fa-user-circle-o navUserProfile" aria-hidden="true"></i></NavLink> : <></>}
                     
                     <ul className="nav-list-items" style={{justifyContent:"center"}}>
                         
