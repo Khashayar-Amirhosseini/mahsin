@@ -1,7 +1,4 @@
 import { createContext, useState } from "react";
-import lazerServices from '../assets/img/hair-removal-with-laser.jpg'
-import hairService from '../assets/img/skin-hair-service.jpg'
-import surgeryServices from '../assets/img/serive_labiaplasty.jpg'
 import { useEffect } from "react";
 import axios from "axios";
 import serviceImage from "../assets/img/image.png"

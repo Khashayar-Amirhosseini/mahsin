@@ -1,9 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import Thermage from '../assets/img/Thermage-CPT.png'
-import Fraxel from '../assets/img/Fraxel.png'
-import Motus from '../assets/img/Motus-ax.png'
-import monalisatouch from '../assets/img/monalisatouch.png'
-import Liposonix from '../assets/img/Liposonix.png'
 import axios from "axios";
 import facilityImage from "../assets/img/image.png"
  

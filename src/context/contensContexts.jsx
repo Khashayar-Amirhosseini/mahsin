@@ -1,9 +1,5 @@
 import axios from "axios";
 import { createContext, useContext, useState,useEffect } from "react";
-import image1 from '../assets/img/p1.jpg'
-import image2 from '../assets/img/p2.jpg'
-import image3 from '../assets/img/p3.jpg'
-import image4 from '../assets/img/p4.jpg'
 import articleImage from '../assets/img/article.jpg'
 export const ContentsContext = createContext()
 const ContentsContextProvider = (props) => {

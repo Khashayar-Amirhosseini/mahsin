@@ -1,15 +1,4 @@
 import { createContext, useState } from "react";
-import sepehr from '../assets/img/sepehr.png'
-import ahmadReza from '../assets/img/ahmadreza.png'
-import goal1 from '../assets/img/goal1.webp'
-import goal2 from '../assets/img/goal2.jpg'
-import goal3 from '../assets/img/goal3.jpg'
-import goal4 from '../assets/img/goal3.jpg'
-import photo1 from '../assets/img/c1.jpg'
-import photo2 from '../assets/img/c2.jpg'
-import photo3 from '../assets/img/c3.jpg'
-import photo4 from '../assets/img/c4.jpg'
-import photo5 from '../assets/img/c5.jpg'
 import { useEffect } from "react";
 import axios from "axios";
 import pictureProfile from '../assets/img/image.png'
