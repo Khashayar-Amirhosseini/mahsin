@@ -7,6 +7,7 @@ import axios from "axios";
 import * as yup from 'yup';
 
 import './footer.css'
+import { Link } from 'react-router-dom';
 const Footer = (props) => {
 
    const { contacts } = useContext(FooterContext)
@@ -192,6 +193,12 @@ const validate=async()=>{
                <div className="row copyright" style={{justifyContent:"center"}}>
                   <p>تمامی حقوق مادی و معنوی این سایت متعلق به کلینیک زیبایی ماه سین است.</p>
                </div>
+               <div className="row">
+               <div>
+                  <p style={{color:'darkolivegreen',float:'left'}}>Design and developed by <a style={{color:"darkgoldenrod",textDecoration:'none'}} href='https://www.linkedin.com/in/khashayar-amirhosseini-969a60247/'>Khashayar Amirhosseini</a></p>
+               </div>
+               </div>
+               
             </>}
       </div>)
 

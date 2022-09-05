@@ -78,7 +78,7 @@ const NavBar = (props) => {
             <nav className='expanded-navbar' >
                 <ul className="nav-list-items ">
                     <li className="nav-item ml-2 ">
-                        <NavLink className="nav-link " aria-current="page" to="/" >خانه</NavLink>
+                        <NavLink className="nav-link " aria-current="page" to="/mahsin/" >خانه</NavLink>
                     </li>
                     <li className="nav-item">
                     <HashLink className="nav-link" to="/mahsin/#about">درباره ما</HashLink>  
@@ -131,7 +131,7 @@ const NavBar = (props) => {
                     <div className="row">
                         <ul className="slider-nav">
                             <li className="small-screen-nav-item ml-2 ">
-                                <NavLink className="small-screen-nav-item" aria-current="page" to="/" >خانه</NavLink>
+                                <NavLink className="small-screen-nav-item" aria-current="page" to="/mahsin/" >خانه</NavLink>
                             </li>
                             <li className="nav-item">
                                 <HashLink className="small-screen-nav-item" to="/mahsin/#about">درباره ما</HashLink>
