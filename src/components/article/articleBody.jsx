@@ -39,7 +39,7 @@ const ArticleBody = (props) => {
   return (
     <div className="paper-body">
       <div dangerouslySetInnerHTML={template} />
-      {user.userInf.blogger?
+      {(user.userInf.blogger||user.userInf.viewer)?
       <textarea name="paragraphs" ref={par3} style={{ height: height3 }} defaultValue={paper.paragraphs} onBlur={handleChange} placeholder="کد html مقاله" />:
       <></>}
     </div>

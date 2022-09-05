@@ -134,7 +134,7 @@ const Acheivement = (props) => {
 
     }
     return (
-        user.userInf.achievement?
+        (user.userInf.achievement||user.userInf.viewer)?
             <>
 
                 <li key={uuidv4()}>

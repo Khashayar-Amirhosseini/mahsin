@@ -68,7 +68,7 @@ const History = (props) => {
     }
 
     return (
-        user.userInf.history?
+        (user.userInf.history||user.userInf.viewer)?
             <div className="accordion-body">
                 <form>
                     <textarea name="description"  value={history.description} onChange={handleChange}/>

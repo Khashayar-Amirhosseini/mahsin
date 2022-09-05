@@ -25,7 +25,7 @@ const DiscountManagement = (props) => {
         async () => {
             const response = await axios({
                 method: 'get',
-                url: `${Address}/action/discount/findAll.do?`,
+                url: `${Address}/action/viewer/findAll.do?`,
                 headers:{'Access-Token':`${user.token}`}
             })
             if (response.status = 200) {

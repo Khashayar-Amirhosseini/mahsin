@@ -86,7 +86,7 @@ const Picture = (props) => {
     }
 
     return (
-        user.userInf.picture ?
+        (user.userInf.picture||user.userInf.viewer) ?
         <li className="col-md-2 col-sm-3" > 
             <div className="picture-form" >
                 <div className="row pic">

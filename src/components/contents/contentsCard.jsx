@@ -59,7 +59,7 @@ const ContentsCard = (props) => {
         }}
     }
     return (
-        user.userInf.blogger ?
+        (user.userInf.blogger||user.userInf.viewer) ?
             <>
                 <div key={uuidv4()} className="col-md-3">
                     <div key={uuidv4()} className="card" >

@@ -228,7 +228,7 @@ const Doctrors = (props) => {
     }
     }
     return (
-        user.userInf.doctor ?
+        (user.userInf.doctor||user.userInf.viewer) ?
             <>
                 <div key={uuidv4()} className='doctor-form'>
                     <form>

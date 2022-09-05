@@ -185,7 +185,7 @@ const ArticleTitle = (props) => {
     }
 
     return (
-        user.userInf.blogger ?
+        (user.userInf.blogger||user.userInf.viewer) ?
             <div className="row p-4 p-md-5 mb-4 text-white rounded mainTitle" id="articleTitle">
                 <div className="row">
                     <div className="col-md-6 px-0">

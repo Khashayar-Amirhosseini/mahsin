@@ -158,7 +158,7 @@ const Goal = (props) => {
          }   
     }   
     return ( 
-        user.userInf.goal?<>
+        (user.userInf.goal||user.userInf.viewer)?<>
         <div key={uuidv4()} className="col-md-3 p-2">
                     <div key={uuidv4()} className="card" >
                         <form className="goal-form">

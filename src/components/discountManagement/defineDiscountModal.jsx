@@ -58,7 +58,7 @@ const DefineDiscountModal = (props) => {
         try {
             const response = await axios({
                 method: "post",
-                url: `${Address}/action/management/findOneUser.do?userId=${input.value}`,
+                url: `${Address}/action/viewer/findOneUser.do?userId=${input.value}`,
                 headers: {'Access-Token':`${user.token}` },
             })
             if(response.data.id){

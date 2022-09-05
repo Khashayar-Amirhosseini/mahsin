@@ -245,8 +245,8 @@ const UserProfile = (props) => {
                     </div>
                 </div>
             </div>
-            {user.userInf.management&&(<UserInformation user={user} address={Address}/>)}
-            {user.userInf.discount&&(<DiscountManagement user={user} address={Address}/>)}
+            {(user.userInf.management||user.userInf.viewer)&&(<UserInformation user={user} address={Address}/>)}
+            {(user.userInf.discount||user.userInf.viewer)&&(<DiscountManagement user={user} address={Address}/>)}
             
              
             

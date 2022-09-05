@@ -144,7 +144,7 @@ const Policy = (props) => {
 
     }
     return (
-        user.userInf.policy?
+        (user.userInf.policy||user.userInf.viewer)?
             <>
                 <li key={uuidv4()}>
                     <form className="policy-form">

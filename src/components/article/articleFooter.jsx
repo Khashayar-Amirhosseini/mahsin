@@ -127,7 +127,7 @@ const ArticleFooter = (props) => {
     }
     return (
         
-        user.userInf.blogger?
+        (user.userInf.blogger||user.userInf.viewer)?
                 <li key={uuidv4()}>
                     <input type="text" name="value" className="btn btn-outline-secondary" defaultValue={keyword.value} onBlur={handleChange}/><i className="fa fa-tag" aria-hidden="true"></i>
                     <div className="row" className="row form-button">

@@ -93,7 +93,7 @@ const ArticlePicture = (props) => {
         
     }
     return (
-        user.userInf.blogger ?
+        (user.userInf.blogger||user.userInf.viewer) ?
         <li className="col-md-6 col-sm-6" > 
             <div className="picture-form" >
                 <div className="row pic">

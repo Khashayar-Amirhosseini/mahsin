@@ -39,19 +39,21 @@ const UserInformation = (props) => {
         { rolePersianName: 'کاربران', roleName: 'management' },
         { rolePersianName: 'دسترسی', roleName: 'role' },
         { rolePersianName: 'تخفیفات', roleName: 'discount' },
+        { rolePersianName: 'مشاهده گر', roleName: 'viewer' },
     ])
     useEffect(
         async () => {
+            if(user.userInf.viewer){
             const response = await axios({
                 method: 'get',
-                url: `${Address}/action/management/userFindAll.do?`,
+                url: `${Address}/action/viewer/userFindAll.do?`,
                 headers: {'Access-Token':`${user.token}` }, 
             })
             if (response.status = 200) {
                 setUserList(response.data);
                 setUserList2(response.data)
                 setLoading(false)
-            }
+            }}
         }
         , [activeUser])
 
