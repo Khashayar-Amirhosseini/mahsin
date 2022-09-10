@@ -30,7 +30,6 @@ const ArticlePicture = (props) => {
         createPhoto(e)
     }
     const deleteHandler = async (e) => {
-        
         e.preventDefault();
         if (picture.id!==0){
             setIsSending(true)
@@ -41,7 +40,7 @@ const ArticlePicture = (props) => {
                     headers: { "enctype": "multipart/form-data",'Access-Token':`${user.token}`},
                })
                deletePhoto(e, picture.id) 
-               
+
            }
            catch (e) {
             if(e.response){
@@ -98,7 +97,7 @@ const ArticlePicture = (props) => {
             <div className="picture-form" >
                 <div className="row pic">
                 {picture.id!==0?<>
-                    <img key={uuidv4()} src={`${Address}resources/paragraph/${picture.id}.png`} alt="محل بارگذاری تصاویر" />
+                    <img key={uuidv4()} src={`${Address}/resources/paragraph/${picture.id}.png`} alt="محل بارگذاری تصاویر" />
                     
                 </>:
                 <>
@@ -110,9 +109,9 @@ const ArticlePicture = (props) => {
                     <label key={uuidv4()} htmlFor={props.itemKey}><i className="fa fa-cloud-upload lab" aria-hidden="true" ></i></label>
                 </div>
                 <div className="row link">
-                <p >src={`${Address}resources/paragraph/${picture.id}.png`}</p>
+                <p >src={`${Address}/resources/paragraph/${picture.id}.png`}</p>
                 </div>
-                <div className="row" className="row form-button">
+                <div className="row form-button">
                             <div className="but">
                                 <button className={!picture.changed ? ' btn btn-outline-success' : 'btn btn-outline-danger'} disabled={isSending} onClickCapture={submitHandler}><i className="fa fa-floppy-o" aria-hidden="true"></i></button>
                                 <button type="button" className="btn btn-outline-primary" onClick={addHandler} disabled={isSending}><i className="fa fa-plus" aria-hidden="true" ></i></button>

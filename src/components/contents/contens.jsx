@@ -68,7 +68,7 @@ const Contents = (props) => {
                                                         <div key={uuidv4()} className="col-md-3">
                                                             <div key={uuidv4()} className="card" >
                                                                 <img key={uuidv4()} src={p.image} className="card-img-top" alt="cover" />
-                                                                <Link to={`/blog/${i}`} onClick={()=>{setShowModal(false)}}><h5>{p.title}</h5></Link>
+                                                                <Link to={`/mahsin/blog/${i}`} onClick={()=>{setShowModal(false)}}><h5>{p.title}</h5></Link>
                                                                 <div key={uuidv4()} className="card-body">
                                                                     <h6 key={uuidv4()} className="card-text">
                                                                         <ReadMore>

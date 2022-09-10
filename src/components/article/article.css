@@ -170,10 +170,16 @@
   }
   ul{
     padding-right: 0px;
+    margin-right: 60px
   }
   .refrences{
       font-family: 'BYekan';
   }
+  li{
+    font-family: bYekan;
+
+  }
+
 
   
 

@@ -57,9 +57,7 @@ const Article = (props) => {
     }, [isLoading,id.id])
     useEffect(() => {
         if (currentPaper.paragraphPics !== undefined) {
-            
                 setPhotoList(currentPaper.paragraphPics)
-            
         }
     }, [id.id,currentPaper])
     useEffect(() => {
@@ -107,6 +105,9 @@ const Article = (props) => {
         const newPhoto = [...photoList];
         newPhoto[index] = state;
         setPhotoList(newPhoto);
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.paragraphPics=newPhoto;
+        setCurrentPaper(newCurrentPaper)
     }
     const createPhoto = (e) => {
         e.preventDefault()
@@ -121,11 +122,17 @@ const Article = (props) => {
         }
         const newPhotoList = photoList.filter(d => d.id !== id)
         setPhotoList([...newPhotoList])
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.paragraphPics=newPhotoList;
+        setCurrentPaper(newCurrentPaper)
     }
     const onChangeKeyword=(e,state,index)=>{
         const newKeywordList=[...kerwordList];
         newKeywordList[index]=state;
         setKeywordList(newKeywordList);
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.keywords=newKeywordList;
+        setCurrentPaper(newCurrentPaper)
     }
 
     const createKeyword=(e)=>{
@@ -133,6 +140,9 @@ const Article = (props) => {
         const newKeyword={ id: 0, value: ""}
         kerwordList.push(newKeyword)
         setKeywordList([...kerwordList])     
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.keywords=kerwordList;
+        setCurrentPaper(newCurrentPaper)
     }
     const deleteKeyword=(e,id)=>{
         e.preventDefault(e)
@@ -141,19 +151,28 @@ const Article = (props) => {
           }
         const newKeywordList= kerwordList.filter(d=>d.id!==id)
         setKeywordList([...newKeywordList])
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.keywords=newKeywordList;
+        setCurrentPaper(newCurrentPaper)
     }
 
     const onChangeRefrence=(e,state,index)=>{
         const newRefrenceList=[...refrenceList];
         newRefrenceList[index]=state;
         setRefrenceList(newRefrenceList);
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.references=newRefrenceList;
+        setCurrentPaper(newCurrentPaper)
     }
 
     const createRefrence=(e)=>{
         e.preventDefault()
         const newRefrence={ id: 0, value: ""}
         refrenceList.push(newRefrence)
-        setRefrenceList([...refrenceList])     
+        setRefrenceList([...refrenceList])
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.references=newRefrence;
+        setCurrentPaper(newCurrentPaper)     
     }
     const deleteRefrence=(e,id)=>{
         e.preventDefault(e)
@@ -162,6 +181,9 @@ const Article = (props) => {
           }
         const newRefrenceList= refrenceList.filter(d=>d.id!==id)
         setRefrenceList([...newRefrenceList])
+        const newCurrentPaper={...currentPaper}
+        newCurrentPaper.references=newRefrenceList;
+        setCurrentPaper(newCurrentPaper)
     }
     return (
         isLoading ?
@@ -255,7 +277,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/blog/${nextId}`} >ادامه</Link>
+                                        <Link key={uuidv4()} to={`/mahsin/blog/${nextId}`} >ادامه</Link>
                                     </div>
                                     <div className="col-auto d-none ">
                                         <img key={uuidv4()} src={papers[nextId].image} />
@@ -284,7 +306,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/blog/${previousId}`}>ادامه</Link>
+                                        <Link key={uuidv4()} to={`/mahsin/blog/${previousId}`}>ادامه</Link>
                                     </div>
 
                                 </div>
