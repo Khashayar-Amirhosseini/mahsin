@@ -281,7 +281,7 @@ const ServiceCard = (props) => {
 
             (cluster.state == "active") ?
                 <li key={uuidv4()} className="services col-md-4 col-12">
-                    <div className="ih-item square effect6 from_top_and_bottom">
+                    <div className=" ih-item square effect6 from_top_and_bottom">
                         <NavLink to={`/blog/${serviceId}`}>
                             <img className="TitlePic" src={cluster.image} />
                             <div className="info">
@@ -294,7 +294,7 @@ const ServiceCard = (props) => {
                             </div>
                         </NavLink>
                     </div>
-                    <div className='subTitle'>
+                    <div className=' subTitle'>
                         <h4>{cluster.title}</h4>
                     </div>
                 </li> :

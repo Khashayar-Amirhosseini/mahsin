@@ -2,8 +2,7 @@ ul.serviceList{
     margin-top: 20px; 
     list-style-type: none;
     justify-content: center;
-    
-    
+    margin-right: 0 !important;  
 }
 li.services{
     text-align: center;

@@ -13,13 +13,12 @@ const Fasilites = (props) => {
     const { isLoading } = useContext(FasilitiesContext);
     const user = props.user
     const [fasilityList, setFasilityList] = useState([{ id: 0, name: "", utility: "", description: "", user: user, date: new Date }])
-    
-    useEffect(() => {
-        if (fasilityList.length === 1) {
-            setFasilityList(fasility)
-        }
-    })
     const [show, setShow] = useState([fasilityList[0].utility, fasilityList[0].description, fasility[0].image])
+    useEffect(() => {
+            setFasilityList(fasility);
+           setShow([fasilityList[0].utility, fasilityList[0].description, fasility[0].image])  
+    },[fasility])
+    
     const Address = props.address
 
 
@@ -85,7 +84,7 @@ const Fasilites = (props) => {
                                             if (f.state == "active") {
                                                 return (
                                                     <li key={index} className="nav-item" role="presentation">
-                                                        <button className="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="false" onClick={() => setShow([fasilityList[index].utility, fasilityList[index].description, fasilityList[index].image])} >{f.name} </button>
+                                                        <button className="nav-link" id="home-tab" data-bs-toggle="tab"  data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="false" onClick={() => setShow([fasilityList[index].utility, fasilityList[index].description, fasilityList[index].image])} >{f.name} </button>
                                                     </li>
                                                 )
                                             }
