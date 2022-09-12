@@ -21,26 +21,7 @@ import logo from './logo.png';
 
 
 const App = () => {
-    const Address = "http://89.32.250.218:8080/MahsinApi"
-    // const user={ name: "خشایار", family: "امیرحسینی", id: 25, role: [
-    // {id:1,roleName:"admin",recordControl:1},
-    // {id:2,roleName:"history",recordControl:1},
-    // {id:3,roleName:"doctor",recordControl:1},
-    // {id:4,roleName:"history",recordControl:1},
-    // {id:5,roleName:"goal",recordControl:1},
-    // {id:6,roleName:"blogger",recordControl:1},
-    // {id:7,roleName:"facility",recordControl:1},
-    // {id:8,roleName:"footer",recordControl:1},
-    // {id:9,roleName:"policy",recordControl:1},
-    // {id:11,roleName:"service",recordControl:1},
-    // {id:12,roleName:"picture",recordControl:1},
-    // {id:14,roleName:"achievement",recordControl:1},
-    // {id:15,roleName:"footer",recordControl:1},
-    // {id:16,roleName:"user",recordControl:1},
-    // {id:18,roleName:"manager",recordControl:1}
-    // ],phoneNumber:'09370970587',email:'kh.amirhosseini@Gmail.com' ,state:"inactive"}
-    //const user={ name: "مهمان", family: "", id: 0, phoneNumber:'',email:'',guest:true}
-    
+    const Address = "http://89.32.250.218:8080/MahsinApi"    
     const user = { userInf: { name: "مهمان", family: "", id: 0, phoneNumber: '', email: '', footer: false }, token: "" }
     const [isAuth, setIsAuth] = useState(false);
     const [athenticatedUser, setAthenticatedUser] = useState(user);

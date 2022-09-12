@@ -42,7 +42,7 @@ const Header = (props) => {
     const logoutHandler=()=>{
         props.logout();
     }
-         
+     const [display,setDisplay]=useState(0)    
     return (
         <header className="main-header">
             {isAuth?
@@ -97,7 +97,7 @@ const Header = (props) => {
             </div>
             <div className="logo col-md-12">
                 <a href="#" className="logo col-md-12">
-                    <img src={logo2} />
+                    <img src={logo2} style={{opacity:display}} onLoad={()=>setDisplay(1)} />
                 </a>
             </div>
             {isLoading?

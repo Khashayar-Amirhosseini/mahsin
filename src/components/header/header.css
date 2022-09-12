@@ -40,7 +40,7 @@
 }
 .logo img{
     height: 222px;
-    animation: fadeInAnimation ease 3s
+    animation: fadeInAnimation ease 6s
    
 }
 @keyframes fadeInAnimation {

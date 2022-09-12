@@ -9,6 +9,10 @@ import AboutContextProvider, { AboutContext } from "../../context/aboutContext";
 import ContentsContextProvider, { ContentsContext } from "../../context/contensContexts";
 import FasilitiesProvider from "../../context/fasilitiesContext";
 import ServiceContextProvider from "../../context/service-context";
+import React, { Suspense } from 'react';
+
+
+
 
 
 const Home = (props) => {
@@ -28,9 +32,11 @@ const Home = (props) => {
                 </ServiceContextProvider>
             </div>
             <div id="fasilites">
+            
                 <FasilitiesProvider address={props.address} user={props.user}>
                     <Fasilites  address={props.address} user={props.user}/>
                 </FasilitiesProvider>
+            
             </div>
             <div id='contents'>
                 <ContentsContextProvider address={props.address} user={props.user}>
