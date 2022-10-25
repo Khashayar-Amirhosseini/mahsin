@@ -23,13 +23,14 @@ const Article = (props) => {
     const { papers } = useContext(ContentsContext);
     const { isLoading } = useContext(ContentsContext);
     const [paperList, setPaperList] = useState([]);
-    const [currentPaper, setCurrentPaper] = useState({})
+   
     const user = props.user;
     const Address = props.address
     const id = useParams();
     const keywords = { id: 0, value: ""}
     const references = { id: 0, url: "", user: user }
     const newPaper = { id: 0, title: "مقاله جدید", paragraphs: "", writer: "", keywords: [keywords], user: user, date: new Date, references: [references], image: articleImage, paragraphPics: [{ id: 0, address: pictureProfile }] }
+    const [currentPaper, setCurrentPaper] = useState(newPaper)
     const [isDisable, setIsDisable] = useState(false)
     const [photoList, setPhotoList] = useState([]);
     const [kerwordList,setKeywordList]=useState([]);
@@ -42,9 +43,27 @@ const Article = (props) => {
             setPaperList(papers)  
         }
     },[isLoading])
-    useEffect(() => {
-        const current = (papers[id.id] ? papers[id.id] : newPaper)
-        setCurrentPaper(current)
+    const findPaper=async(id)=>{
+        const response = await axios({
+            method: 'get',
+            url: `${Address}/action/guest/findOnePost.do?id=${id}`,
+            withCredentials: false,
+        })
+        (response.data)?setCurrentPaper(response):setCurrentPaper(newPaper)  
+    }
+    useEffect(async() => {
+       // const current = (papers[id.id] ? papers[id.id] : newPaper)
+        if(id.id>0){
+        if(papers.length>1){
+            setCurrentPaper(papers.filter(p=>p.id==id.id)[0])
+        }
+        else{
+            findPaper(id.id)}
+        }
+
+       
+       // setCurrentPaper(current)
+       
         if (currentPaper.paragraphPics !== undefined) {
             setPhotoList(currentPaper.paragraphPics)
         }
@@ -54,7 +73,9 @@ const Article = (props) => {
         if(currentPaper.references!==undefined){
             setKeywordList(currentPaper.references)
         }
+        
     }, [isLoading,id.id])
+    
     useEffect(() => {
         if (currentPaper.paragraphPics !== undefined) {
                 setPhotoList(currentPaper.paragraphPics)
@@ -95,9 +116,21 @@ const Article = (props) => {
         setRefrenceList([{ id: 0, value: "" }])
 
     }
+    let nextId=0
+    let previousId=0
 
-    const nextId = parseInt(id.id) + 1
-    const previousId = parseInt(id.id) - 1
+    papers.map((p,i)=>{
+            if(p.title===currentPaper.title){
+                 nextId=i+1
+                 previousId=i-1
+            }                 
+        })
+   
+
+    
+    //const nextId = parseInt(id.id) + 1
+    
+    //const previousId = parseInt(id.id) - 1
     const onChangePaper = (e, state, index) => {
         setCurrentPaper(state);
     }
@@ -277,7 +310,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/mahsin/blog/${nextId}`} >ادامه</Link>
+                                        <Link key={uuidv4()} to={`/mahsin/blog/${papers[nextId].id}`} >ادامه</Link>
                                     </div>
                                     <div className="col-auto d-none ">
                                         <img key={uuidv4()} src={papers[nextId].image} />
@@ -306,7 +339,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/mahsin/blog/${previousId}`}>ادامه</Link>
+                                        <Link key={uuidv4()} to={`/mahsin/blog/${papers[previousId].id}`}>ادامه</Link>
                                     </div>
 
                                 </div>

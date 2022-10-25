@@ -145,7 +145,7 @@ const Contents = (props) => {
                             {
                                 if (index > paperList.length - 5|| p.id===0) {        
                                 return (
-                                            <ContentsCard  key={uuidv4()} itemKey={uuidv4()} paper={p} index={(index)} user={user}  createPaper={createPaper} deletePaper={deletePaper} isDisable={isDisable} address={Address} />
+                                            <ContentsCard  key={uuidv4()} itemKey={uuidv4()} paper={p} index={(p.id)} user={user}  createPaper={createPaper} deletePaper={deletePaper} isDisable={isDisable} address={Address} />
                                         )
                                     
                                 }
