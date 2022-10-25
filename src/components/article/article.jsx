@@ -360,7 +360,7 @@ const Article = (props) => {
                     <div className="row key-words">
                     {kerwordList.map((k, i) => {
                         return (
-                            <ArticleFooter key={uuidv4()} itemKey={uuidv4()} user={user} address={Address} index={i} onchange={onChangePaper} paper={currentPaper} keyword={k} createKeyword={createKeyword}  deleteKeyword={ deleteKeyword} onchange={onChangeKeyword}></ArticleFooter>
+                            <ArticleFooter key={uuidv4()} itemKey={uuidv4()} user={user} address={Address} index={i}  paper={currentPaper} keyword={k} createKeyword={createKeyword}  deleteKeyword={ deleteKeyword} onchange={onChangeKeyword}></ArticleFooter>
                         )
                     })}
                     </div>
@@ -370,7 +370,7 @@ const Article = (props) => {
                     <div className="row refrences"> 
                     {refrenceList.map((k, i) => {
                         return (
-                            <Refrences key={uuidv4()} itemKey={uuidv4()} user={user} address={Address} index={i} onchange={onChangePaper} paper={currentPaper} refrence={k} createRefrence={createRefrence}  deleteRefrence={ deleteRefrence} onchange={onChangeRefrence}></Refrences>
+                            <Refrences key={uuidv4()} itemKey={uuidv4()} user={user} address={Address} index={i}  paper={currentPaper} refrence={k} createRefrence={createRefrence}  deleteRefrence={ deleteRefrence} onchange={onChangeRefrence}></Refrences>
                         )
                     })}
                     </div>

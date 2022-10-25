@@ -29,7 +29,7 @@ const ServiceCard = (props) => {
          ()=>{
              papers.map((p,i)=>{
                  p.title===cluster.title&&(
-                 setServiceId(i))                
+                 setServiceId(p.id))                
              })
          }
          ,[])
