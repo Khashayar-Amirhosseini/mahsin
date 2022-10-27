@@ -249,7 +249,7 @@ const ArticleTitle = (props) => {
                             <p className="lead my-3">{paper.abstract}</p>
                         </div>
                         <div className="col-md-6 px-0 imageSection">
-                            <img key={uuidv4()} style={} src={paper.image} />
+                            <img key={uuidv4()} src={paper.image} />
                         </div>
                     </div>
                     <div className="row paperInf ">

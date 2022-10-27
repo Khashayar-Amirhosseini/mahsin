@@ -325,7 +325,7 @@ const About = (props) => {
                         <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="history" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <div className="row photos">
-                                    <div className="col-md-6 col-12">
+                                    <div className="col-12">
                                         {isLoading ?
                                             <>
                                                 <Skeleton height={200} />
@@ -346,13 +346,13 @@ const About = (props) => {
                                                     {photoList.map((p, index) => {
                                                         if (index === 0) {
                                                             return <div key={uuidv4()} className="carousel-item  active">
-                                                                <img src={p.link} className="d-block w-100" alt="..." />
+                                                                <img src={p.link} className="d-block w-100 h-100" alt="..." />
                                                             </div>
 
                                                         }
                                                         else {
                                                             return <div key={uuidv4()} className="carousel-item">
-                                                                <img src={p.link} className="d-block w-100" alt="..." />
+                                                                <img src={p.link} className="d-block w-100 h-100" alt="..." />
                                                             </div>
                                                         }
                                                     })}
