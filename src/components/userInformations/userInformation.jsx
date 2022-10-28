@@ -41,7 +41,7 @@ const UserInformation = (props) => {
         { rolePersianName: 'تخفیفات', roleName: 'discount' },
         { rolePersianName: 'مشاهده گر', roleName: 'viewer' },
     ])
-    useEffect(
+    {useEffect(
         async () => {
             if(user.userInf.viewer){
             const response = await axios({
@@ -55,7 +55,7 @@ const UserInformation = (props) => {
                 setLoading(false)
             }}
         }
-        , [activeUser])
+    , [])}
 
     const handleChange = (e) => {
         const input = e.currentTarget;
@@ -152,6 +152,19 @@ const UserInformation = (props) => {
                     data: formData,
                     headers: {'Access-Token':`${user.token}` },
                 })
+                if(activeUser.password){
+                    formData.delete("name");
+                    formData.delete("family");
+                    formData.delete("phoneNumber");
+                    formData.delete("birthDay");
+                    formData.delete("inviterCode");
+                    formData.append("newPassword",activeUser.password)
+                        const response2 = await axios({
+                            method: "post",
+                            url: `${Address}/action/admin/changePassword.do`,
+                            data: formData,
+                            headers: {'Access-Token':`${user.token}` },
+                        })}
                 const newUser = { ...result };
                 setIsChanged(false);
                 setIsSuccessful(true);
@@ -231,7 +244,7 @@ const UserInformation = (props) => {
         }
     }
 
-    ///////////////////////////////
+    ///////////////////////////////search box/////////
     const [value, setValue] = useState(new Date());
     
     const handleChange2 = (e) => {
@@ -392,6 +405,10 @@ const UserInformation = (props) => {
                                     <label htmlFor="input-birthDay" className="form-label">تاریخ تولد</label>
                                     <DatePicker inputClass="form-control " id="input-birthDay" calendar={persian} locale={persian_fa} value={activeUser.birthDay} onChange={(e) => handleChange6(e)} calendarPosition="bottom-right" />
                                 </div>
+                                {(user.userInf.admin||user.userInf.viewer)&&<div className="mb-3 col-md-6 p-1">
+                                    <label htmlFor="input-password" className="form-label">رمز عبور</label>
+                                    <input type="password" name="password" className="form-control " id="input-password"  value={activeUser.password} onChange={(e) => handleChange(e)} calendarPosition="bottom-right" />
+                                </div>}
 
                             </div>
                             {user.userInf.role ?
