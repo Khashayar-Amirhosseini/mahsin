@@ -153,11 +153,13 @@ const UserInformation = (props) => {
                     headers: {'Access-Token':`${user.token}` },
                 })
                 if(activeUser.password){
+                    formData.delete("id");
                     formData.delete("name");
                     formData.delete("family");
                     formData.delete("phoneNumber");
                     formData.delete("birthDay");
                     formData.delete("inviterCode");
+                    formData.append("userId", activeUser.id)
                     formData.append("newPassword",activeUser.password)
                         const response2 = await axios({
                             method: "post",
