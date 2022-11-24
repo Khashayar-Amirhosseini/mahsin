@@ -310,7 +310,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/blog/${papers[nextId].id}`} >ادامه</Link>
+                                        <Link key={uuidv4()} to={`blog/${papers[nextId].id}`} >ادامه</Link>
                                     </div>
                                     <div className="col-auto d-none ">
                                         <img key={uuidv4()} src={papers[nextId].image} />
@@ -339,7 +339,7 @@ const Article = (props) => {
                                             </div>
 
                                         </div>
-                                        <Link key={uuidv4()} to={`/blog/${papers[previousId].id}`}>ادامه</Link>
+                                        <Link key={uuidv4()} to={`blog/${papers[previousId].id}`}>ادامه</Link>
                                     </div>
 
                                 </div>
