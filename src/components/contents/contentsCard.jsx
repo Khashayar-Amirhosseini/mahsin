@@ -64,7 +64,7 @@ const ContentsCard = (props) => {
                 <div key={uuidv4()} className="col-md-3">
                     <div key={uuidv4()} className="card" >
                         <img key={uuidv4()} src={paper.image} className="card-img-top" alt="cover" />
-                        <Link to={`/mahsin/blog/${index}`}><h5>{paper.title}</h5></Link>
+                        <Link to={`/blog/${index}`}><h5>{paper.title}</h5></Link>
                         <div key={uuidv4()} className="card-body">
                             <h6 key={uuidv4()} className="card-text">
                                 <ReadMore>
@@ -109,7 +109,7 @@ const ContentsCard = (props) => {
                 <div key={uuidv4()} className="col-md-3">
                     <div key={uuidv4()} className="card" >
                         <img key={uuidv4()} src={paper.image} className="card-img-top" alt="cover" />
-                        <NavLink to={`/mahsin/blog/${index}`}><h5>{paper.title}</h5></NavLink>
+                        <NavLink to={`//blog/${index}`}><h5>{paper.title}</h5></NavLink>
                         <div key={uuidv4()} className="card-body">
                             <h6 key={uuidv4()} className="card-text">
                                 <ReadMore>
