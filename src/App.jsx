@@ -55,8 +55,8 @@ const App = () => {
                     <NavBar address={Address} user={athenticatedUser} isAuth={isAuth} logout={logout} />
                     <Routes>
                         <Route path='/' element={<Home address={Address} user={athenticatedUser} isAuth={isAuth} />} />
-                        <Route path="/blog/:id" element={<Blog address={Address} user={athenticatedUser} isAuth={isAuth} />} />
-                        <Route path='/userProfile' element={<UserProfile address={Address} user={athenticatedUser} isAuth={isAuth} logout={logout} />} />
+                        <Route path="blog/:id" element={<Blog address={Address} user={athenticatedUser} isAuth={isAuth} />} />
+                        <Route path='userProfile' element={<UserProfile address={Address} user={athenticatedUser} isAuth={isAuth} logout={logout} />} />
                     </Routes>
                 </BrowserRouter>
                 <div id="contactUs">

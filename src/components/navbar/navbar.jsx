@@ -168,7 +168,7 @@ const NavBar = (props) => {
             {showNav && (
                 <nav className='expanded-navbar alwaysTop' >
                     
-                    {isAuth ? <NavLink  to="mahsin/userProfile"><i className="fa fa-user-circle-o navUserProfile" aria-hidden="true"></i></NavLink> : <></>}
+                    {isAuth ? <NavLink  to="userProfile"><i className="fa fa-user-circle-o navUserProfile" aria-hidden="true"></i></NavLink> : <></>}
                     
                     <ul className="nav-list-items" style={{justifyContent:"center"}}>
                         
