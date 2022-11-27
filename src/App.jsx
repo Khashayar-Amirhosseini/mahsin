@@ -21,7 +21,7 @@ import logo from './logo.png';
 
 
 const App = () => {
-    const Address = "http://maahsin-test.click//MahsinApi"    
+    const Address = "http://maahsin-test.click/MahsinApi"    
     const user = { userInf: { name: "مهمان", family: "", id: 0, phoneNumber: '', email: '', footer: false }, token: "" }
     const [isAuth, setIsAuth] = useState(false);
     const [athenticatedUser, setAthenticatedUser] = useState(user);
