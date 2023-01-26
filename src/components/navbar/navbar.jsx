@@ -21,7 +21,13 @@ const NavBar = (props) => {
     const [discount,setDiscount]=useState([]);
     const Address=props.address;
     const isAuth=props.isAuth;
-
+    const { window } = props;
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar)
+        return () => {
+            window.removeEventListener('scroll', controlNavbar)
+        }
+    }, [])
     const controlNavbar = () => {
         if (window.scrollY > 350) {
             setShowNav(true)
@@ -29,12 +35,7 @@ const NavBar = (props) => {
             setShowNav(false)
         }
     }
-    useEffect(() => {
-        window.addEventListener('scroll', controlNavbar)
-        return () => {
-            window.removeEventListener('scroll', controlNavbar)
-        }
-    }, [])
+    
     useEffect(() => {
         onclick = () => {
             if (toggleMenu) {
